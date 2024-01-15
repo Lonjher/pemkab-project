@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +28,5 @@ Route::get('/about', function(){
         'image' => 'image.jpg'
     ]);
 });
+
+Route::get('/login', [LoginController::class, 'index']);
