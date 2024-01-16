@@ -34,6 +34,6 @@
             </div>
         </div>
     </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" <?php $__env->stopSection(); ?>
+ <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\KOMINFO\Laravel Project\pemkab\resources\views/login.blade.php ENDPATH**/ ?>

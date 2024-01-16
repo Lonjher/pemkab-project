@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,11 @@ Route::get('/login', function(){
 //     ]);
 // });
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'login']);
+
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
