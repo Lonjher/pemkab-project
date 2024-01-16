@@ -1,6 +1,6 @@
 <?php $__env->startSection('utama'); ?>
     <section>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center pt-3">
             <div class="col-md-5">
                 <main class="form-signin">
                     <div class="card-body shadow-sm p-3 bg-body-tertiary rounded">
@@ -24,9 +24,9 @@
                                 
                             </div>
                             <div class="d-grid col-3 m-3 mx-auto">
-                                <button class="btn btn-sm btn-outline-secondary">
+                                <a class="btn btn-sm btn-outline-secondary" href="<?php echo e(route('google.login')); ?>" >
                                     <img src="img/google.svg" alt="google" width="25px">
-                                </button>
+                                </a>
                             </div>
                         </form>
                     </div>

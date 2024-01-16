@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GoogleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,12 +22,14 @@ Route::get('/login', function(){
     return view('login');
 });
 
-Route::get('/about', function(){
-    return view('about', [
-        'name' => 'Abdul Walid',
-        'email' => 'walid.lonjer@gmail.com',
-        'image' => 'image.jpg'
-    ]);
-});
+// Route::get('/about', function(){
+//     return view('about', [
+//         'name' => 'Abdul Walid',
+//         'email' => 'walid.lonjer@gmail.com',
+//         'image' => 'image.jpg'
+//     ]);
+// });
 
 Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
