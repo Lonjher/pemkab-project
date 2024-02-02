@@ -9,15 +9,18 @@ class Nilai extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'bhs_indo',
-        'bhs_arab',
-        'bhs_inggris',
-        'matematika',
-        'ipa',
-        'ips',
+        'nilai'
     ];
 
     protected $guarded = [
-        'id'
+        'id_nilai'
     ];
+
+    public function student() {
+        return $this->belongsTo(Student::class);
+    }
+
+    public function mapel(){
+        return $this->belongsTo(Mapel::class);
+    }
 }

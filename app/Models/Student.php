@@ -10,17 +10,20 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'nilai_id',
+        'id_nilai',
+        'name_siswa',
         'kelas',
     ];
 
     protected $guarded = [
-        'id'
+        'id_student',
     ];
 
-    public function nilai()
-    {
-        return $this->belongsTo(Nilai::class);
+    public function nilai(){
+        $this->hasMany(Nilai::class);
+    }
+
+    public function mapel(){
+        return $this->hasMany(Mapel::class);
     }
 }

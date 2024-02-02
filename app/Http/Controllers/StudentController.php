@@ -57,7 +57,12 @@ class StudentController extends Controller
     public function show($id)
     {
         $student = Student::FindOrFail($id);
-        return redirect()->route('nilai.show', compact('student'));
+        $student->nilai;
+        $collects = collect($student);
+        return view('students.show', [
+            'title' => 'Show Data'
+        ], compact('collects'));
+        // return redirect()->route('nilai.show', compact('student'));
     }
 
     /**

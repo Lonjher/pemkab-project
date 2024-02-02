@@ -1,9 +1,32 @@
 @extends('layouts.main')
 
 @section('main')
+    {{ dd($collects) }}
     <div class="container">
-        {{ $nilai }}
-        {{ $student }}
-        <h1>Ini Halaman Show Data Siswa</h1>
+        <div class="container">
+            <h1>Data Siswa</h1>
+        </div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Mata Pelajaran</th>
+                        <th scope="col">KKM</th>
+                        <th scope="col">Nilai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach ($student as $siswa)
+                            <th scope="row">{{ $siswa[0]}}</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection

@@ -31,7 +31,7 @@
                         <td>{{ $student['name'] }}</td>
                         <td>{{ $student['kelas'] }}</td>
                         <td>
-                            <a href="{{ route('nilai.show', $student['id']) }}" class="btn btn-primary"><ion-icon name="book"></ion-icon> Lebih</a>
+                            <a href="{{ route('students.show', $student['id']) }}" class="btn btn-primary"><ion-icon name="book"></ion-icon> Lebih</a>
                             <a href="{{ route('students.edit', $student['id']) }}" class="btn btn-info"><ion-icon name="create"></ion-icon> Edit</a>
                             <a href="" class="btn btn-danger"><ion-icon name="remove-circle"></ion-icon> Hapus</a>
                         </td>
