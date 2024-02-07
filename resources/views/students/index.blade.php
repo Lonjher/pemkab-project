@@ -27,12 +27,12 @@
                     <tr>
                         @foreach ($students as $student)
                     <tr>
-                        <td>{{ $student['id'] }}</td>
-                        <td>{{ $student['name'] }}</td>
+                        <td>{{ $student['id_student'] }}</td>
+                        <td>{{ $student['name_siswa'] }}</td>
                         <td>{{ $student['kelas'] }}</td>
                         <td>
-                            <a href="{{ route('students.show', $student['id']) }}" class="btn btn-primary"><ion-icon name="book"></ion-icon> Lebih</a>
-                            <a href="{{ route('students.edit', $student['id']) }}" class="btn btn-info"><ion-icon name="create"></ion-icon> Edit</a>
+                            <a href="{{ route('students.show', $student['id_student']) }}" class="btn btn-primary"><ion-icon name="book"></ion-icon> Lebih</a>
+                            <a href="{{ route('students.edit', $student['id_student']) }}" class="btn btn-info"><ion-icon name="create"></ion-icon> Edit</a>
                             <a href="" class="btn btn-danger"><ion-icon name="remove-circle"></ion-icon> Hapus</a>
                         </td>
                     </tr>

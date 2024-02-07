@@ -9,18 +9,20 @@ class Student extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "id_student";
+    protected $table = "students";
     protected $fillable = [
         'id_nilai',
         'name_siswa',
         'kelas',
     ];
 
-    protected $guarded = [
-        'id_student',
-    ];
+    // protected $guarded = [
+    //     'id_student',
+    // ];
 
     public function nilai(){
-        $this->hasMany(Nilai::class);
+        return $this->hasMany(Nilai::class);
     }
 
     public function mapel(){

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('nilais', function (Blueprint $table) {
-            $table->id('id_nilai');
+            $table->id();
             $table->foreignId('id_mapel')->unique();
             // $table->foreign('id_mapel')->references('id_mapel')->on('mapels');
             // $table->unsignedBigInteger('id_student');

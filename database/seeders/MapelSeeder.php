@@ -13,8 +13,8 @@ class MapelSeeder extends Seeder
      */
     public function run(): void
     {
-        // mapel::create([
-        //     "nama_pelajaran" => "Bahasa Indonesia"
-        // ]);
+        mapel::create([
+            "nama_pelajaran" => "Bahasa Indonesia"
+        ]);
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
-    {{ dd($collects) }}
+    {{-- {{ dd($students) }} --}}
     <div class="container">
         <div class="container">
             <h1>Data Siswa</h1>
@@ -18,8 +18,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        @foreach ($student as $siswa)
-                            <th scope="row">{{ $siswa[0]}}</th>
+                        {{ $data }}
+                        @foreach ($data as $siswa)
+                            {{-- <th scope="row">{{ $siswa->name_siswa }}</th> --}}
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>

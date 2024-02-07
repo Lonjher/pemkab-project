@@ -54,34 +54,38 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(Student $id_student)
     {
-        $student = Student::FindOrFail($id);
-        $student->nilai;
-        $collects = collect($student);
+        // $students = Student::where('id_student', $id_student)->first();
+        // $students = Student::find($id_student);
+        // dd($students);
+        // $collects = collect($student);
         return view('students.show', [
-            'title' => 'Show Data'
-        ], compact('collects'));
+            'title' => 'Show Data',
+            'data' => $id_student,
+        ]);
         // return redirect()->route('nilai.show', compact('student'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)
+    public function edit(Student $id_student)
     {
+        // $students = Student::FindOrFail('id_student');
+        // dd($student);
         return view('students.edit', [
             'title' => 'Edit Data',
-            'data' => $student,
+            'data' => $id_student
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_student)
     {
-        $student = Student::FindOrFail($id);
+        $student = Student::FindOrFail($id_student);
 
         $student->update([
             'name'=> $request->name,

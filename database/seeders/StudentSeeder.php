@@ -13,9 +13,11 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        // Student::create([
-        //     'name_siswa' => 'Ahmad Kurdiadi',
-        //     'kelas'=> 'X',
-        // ]);
+        Student::create(
+            [
+                'id_nilai' => 1,
+                'name_siswa' => 'Ahmad Kurdiadi',
+                'kelas'=> 'X',
+            ]);
     }
 }

@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Nilai;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class NilaiSeeder extends Seeder
 {
@@ -12,6 +13,9 @@ class NilaiSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Nilai::create([
+            'id_mapel' => 1,
+            'nilai' => 70
+        ]);
     }
 }

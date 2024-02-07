@@ -14,11 +14,25 @@ class NilaiFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    public function getNumber($min, $max)
+    {
+        $numbers = range($min, $max);
+        shuffle($numbers);
+        foreach ($numbers as $number){
+           return $number;
+        }
+        return $numbers;
+    }
+
     public function definition(): array
     {
+        // $number = ;
+
+        // dd(getNumber(1, 10));
         return [
-            'id_mapel' => $this->faker->randomDigit(),
-            'nilai' => $this->faker->numberBetween(0,100),
+            'id_mapel' => $this->getNumber(1,10),
+            'nilai' => $this->faker->numberBetween(50,90),
         ];
     }
 }

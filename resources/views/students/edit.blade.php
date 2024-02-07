@@ -5,7 +5,7 @@
     <div class="container rounded mt-2 py-2 bg-primary-subtle">
         <h1>Edit Data</h1>
     </div>
-    <form action="{{ route('students.update', $data->id) }}" method="POST" class="shadow rounded p-2 mt-2" enctype="multipart/form-data">
+    <form action="{{ route('students.update', $data->id_student) }}" method="POST" class="shadow rounded p-2 mt-2" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="mb-3">
